@@ -11,7 +11,7 @@ const [variant, setVariant] = useState('login');
 const toggleVariant = useCallback(() => {
   setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login')   
 },[]);
-const router = useRouter();
+const router = useRouter()
 
 const register = useCallback(async() => {
     try {
@@ -31,8 +31,7 @@ const login = useCallback(async() => {
             redirect: false,
             callbackUrl: '/',
         });
-        router.push('/');
-        
+        router.push('/profiles');
     } catch (error) {
         console.log(error)
     }
